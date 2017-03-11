@@ -1,0 +1,19 @@
+
+<scroll-view  wx:if="{{t}}">
+ <view wx:for="{{listData.contentlist}}"  class="list">
+    <text>{{item.title}}</text>
+    <view class="show">
+        <image src="{{item.img}}"></image> 
+        <text>{{item.desc}}</text>
+    </view>
+
+    <button class="change" data-id="{{item.id}}" bindtap="change"></button>
+    </view>
+</scroll-view>
+
+
+<view  wx:if="{{f}}">
+    <button wx:if="{{f}}"  bindtap="back" class="back_button">返回首页</button>
+     <text>{{content}}</text>
+     <button wx:if="{{f}}"  bindtap="back">返回首页</button>
+</view>
